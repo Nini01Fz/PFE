@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>tictactoe</title>
+</head>
+<body>
+  <div class="container1">
+    <header id="ng">
+        <h1><span id="niou">NIOU</span><span id="gamehub">GameHub</span></h1>
+    </header>
+
+    <nav>
+        <a id="menu-icon" href="#"><i class="fa-solid fa-bars"></i></a>
+        <a href="Home.html">Home</a>
+        <a href="Games.html">Games</a>
+    </nav>
+</div>
+
+    
+    <div class="sidebar">
+        <a href="profile.html"> <i class="fa-solid fa-user"></i> User Profile</a>
+        <a href="login.html"> <i class="fa-solid fa-user"></i> Login/Sign up</a>
+        <a href="#"> <i class="fa-solid fa-envelope"></i> Contact Us</a>
+       <a href="#"> <i class="fa-solid fa-share-nodes"></i>Share</a>
+       <a href="#"> <i class="fa-solid fa-circle-question"></i> About</a>
+    </div>
+     
+     <div class="containerr">
+        <h1>Tic-Tac-Toe Game</h1>
+      <div class="vs-button">
+          <button id="twoPlayers">2 Players</button>
+          <button id="vsComputer">vs Computer</button>
+      </div>
+
+      <div class="game-section two-players" style="display: none;">
+          <small>Player 1 = X || Player 2 = O</small>
+          <div class="game-board">
+              <div class="row">
+                  <div class="cell" onclick="twoPMakeMove(0, 0)"></div>
+                  <div class="cell" onclick="twoPMakeMove(0, 1)"></div>
+                  <div class="cell" onclick="twoPMakeMove(0, 2)"></div>
+              </div>
+              <div class="row">
+                  <div class="cell" onclick="twoPMakeMove(1, 0)"></div>
+                  <div class="cell" onclick="twoPMakeMove(1, 1)"></div>
+                  <div class="cell" onclick="twoPMakeMove(1, 2)"></div>
+              </div>
+              <div class="row">
+                  <div class="cell" onclick="twoPMakeMove(2, 0)"></div>
+                  <div class="cell" onclick="twoPMakeMove(2, 1)"></div>
+                  <div class="cell" onclick="twoPMakeMove(2, 2)"></div>
+              </div>
+          </div>
+          <p class="winner-text" id="twoPlayersWinnerText"></p>
+      </div>
+
+      <div class="game-section vs-computer" style="display: none;">
+          <small>Player 1 = X || Computer = O</small>
+          <div class="game-board">
+              <div class="row">
+                  <div class="cell" onclick="vsComMakeMove(0, 0)"></div>
+                  <div class="cell" onclick="vsComMakeMove(0, 1)"></div>
+                  <div class="cell" onclick="vsComMakeMove(0, 2)"></div>
+              </div>
+              <div class="row">
+                  <div class="cell" onclick="vsComMakeMove(1, 0)"></div>
+                  <div class="cell" onclick="vsComMakeMove(1, 1)"></div>
+                  <div class="cell" onclick="vsComMakeMove(1, 2)"></div>
+              </div>
+              <div class="row">
+                  <div class="cell" onclick="vsComMakeMove(2, 0)"></div>
+                  <div class="cell" onclick="vsComMakeMove(2, 1)"></div>
+                  <div class="cell" onclick="vsComMakeMove(2, 2)"></div>
+              </div>
+          </div>
+          <p class="winner-text" id="vsComputerWinnerText"></p>
+      </div>
+
+      <button id="restartButton" onclick="resetBoard()" style="display: none;">Restart Game</button>
+
+  </div>
+ <!-- Game Rules Modal for Game 2 -->
+ <div id="gameRulesModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Tic-Tac-Toe Rules</h2>
+            <ol>
+                <li>The objective of the game is to be the first player to achieve a straight line (horizontally, vertically, or diagonally) of three of their symbols ('X' or 'O') on the grid.</li>
+                <li>The game ends when one player achieves a straight line of three of their symbols or when all spaces on the grid are filled without a winner (resulting in a draw).</li>
+                <li>If a player successfully achieves a straight line, they win the game. If all spaces on the grid are filled without a winner, the game is a draw.</li>
+                <li>The first player to win a round earns a point, and a new round begins. The game can be played for multiple rounds to determine the overall winner.</li>
+              </ol>
+    </div>
+    <script src="gamerules.js"></script>
+
+  <script src="script2.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+
+        menuIcon.addEventListener('click', function() {
+     
+            sidebar.classList.toggle('sidebar-visible');      
+              });
+    });
+</script>
+</body>
+<footer>
+  <p>© Copyright 2024 NIOUGameHub &nbsp;</p>
+</footer>
+</html>

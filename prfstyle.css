@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url('bkgrd2.jpg'); /* Chemin vers votre image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout le corps */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat;
+}
+
+#niou{
+    color: #70b633;
+}
+.container4{
+    height: 30%;
+    width: 40%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #70b633;
+    padding: 0.5em;
+    z-index: 3;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+div.sidebar {
+    width: 250px; /* Adjust the width as needed */
+    background-color:#70b633;
+    transition: transform 0.3s;
+    overflow-y: auto;
+    position: fixed;
+   /* top: 60px;*/
+    height: 100%;
+   /*padding-top: 60px; /* Adjust the top padding to match your nav height */
+    z-index: 1;
+
+}
+.sidebar.sidebar-visible{
+    transform: translateX(0);
+}
+.sidebar {
+    transform: translateX(-250px);
+    left: 0;
+    height: 100%;
+    width: 250px;
+}
+nav a:first-child {
+    margin-right: auto;
+    order: -1; /* Move the first child to the beginning */
+}
+nav a:hover {
+    background-color: #08120a;
+}
+
+section {
+    flex: 1;
+    padding: 10em;
+    padding-top: 40px;
+    z-index: 0;
+}
+
+h2 {
+    color: #000000;
+}
+
+header {
+    background-color:  #000000 ;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+.container1 {
+    position: relative;
+    z-index: 2; /* Set a higher z-index for the container */
+}
+footer{
+    color: #fff; /* Optional styling */
+
+} 
+.bg-secondary-soft {
+    background-color: rgba(13, 52, 24, 0.573) !important;
+    display: flex;
+
+}
+.rounded {
+    border-radius: 5px !important;
+}
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+.file-upload .square {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    vertical-align: middle;
+    border: 1px solid #e5dfe4;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.text-secondary {
+    --bs-text-opacity: 1;
+    color: rgba(208, 212, 217, 0.5) !important;
+}
+.btn-success-soft {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+.btn-danger-soft {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #29292e;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e5dfe4;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}

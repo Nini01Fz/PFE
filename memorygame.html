@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <header id="ng">
+            <h1><span id="niou">NIOU</span><span id="gamehub">GameHub</span></h1>
+        </header>
+
+        <nav>
+            <a id="menu-icon" href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="Home.html">Home</a>
+            <a href="Games.html">Games</a>
+        </nav>
+    </div>
+
+        
+        <div class="sidebar">
+          <a href="profile.html"> <i class="fa-solid fa-user"></i> User Profile</a>
+          <a href="login.html"> <i class="fa-solid fa-user"></i> Login/Sign up</a>
+          <a href="#"> <i class="fa-solid fa-envelope"></i> Contact Us</a>
+           <a href="#"> <i class="fa-solid fa-share-nodes"></i>Share</a>
+           <a href=""> <i class="fa-solid fa-circle-question"></i> About</a>
+
+        </div>
+       <div class="wrapper">
+        <section>
+          <div class="container">
+          <div id="center-wrapper">
+            <div id="score">Score: <i class="far fa-star"></i> 0</div>
+            <div id="timer">Time: <i class="fas fa-hourglass"></i> 90s</div>
+            <div id="game-board"></div>  
+            <div id="win-message"></div>
+            <div id="lose-message"></div>
+            <canvas id="my-canvas"></canvas>
+          </div>
+          </div>
+      </section>
+      </div>
+
+      <!-- Game Rules Modal for Game 1 -->
+      <div id="gameRulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Memory Game Rules</h2>
+            <ol>
+              <li>Click on any two cards to reveal their symbols.</li>
+              <li>If the symbols match, they remain face-up.</li>
+              <li>If the symbols don't match, they flip back face-down.</li>
+              <li>Remember the positions of the cards as you flip them.</li>
+              <li>The game continues until all pairs are matched.</li>
+              <li>Try to match all pairs in the fewest moves possible.</li>
+          </ol>
+        </div>
+      </div>
+      <script src="gamerules.js"></script>
+
+<script src="index.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+
+        menuIcon.addEventListener('click', function() {
+     
+            sidebar.classList.toggle('sidebar-visible');      
+              });
+    });
+</script>
+<script>
+    window.onscroll = function() { attachSidebar() };
+  
+    function attachSidebar() {
+      var navHeight = document.querySelector('nav').offsetHeight;
+      var sidebar = document.querySelector('.sidebar');
+  
+      if (window.pageYOffset >= navHeight) {
+        sidebar.style.top = '0';
+      } else {
+        sidebar.style.top = navHeight + 'px';
+      }
+    }
+  </script>
+</body>
+<footer>
+    <p>© Copyright 2024 NIOUGameHub &nbsp;</p>
+</footer>
+</html>

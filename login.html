@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <header id="ng">
+            <h1><span id="niou">NIOU</span><span id="gamehub">GameHub</span></h1>
+        </header>
+
+        <nav>
+            <a id="menu-icon" href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="Home.html">Home</a>
+            <a href="Games.html">Games</a>
+        </nav>
+
+        <div class="sidebar">
+            <a href="profile.html"> <i class="fa-solid fa-user"></i> User Profile</a>
+            <a href="login.html"> <i class="fa-solid fa-user"></i> Login/Sign up</a>
+            <a href="#"> <i class="fa-solid fa-envelope"></i> Contact Us</a>
+            <a href="#"> <i class="fa-solid fa-share-nodes"></i> Share</a>
+            <a href=""> <i class="fa-solid fa-circle-question"></i> About</a>
+         </div>
+         <div class="login-container">
+            <h2>Login</h2>
+            <form action="login.php" method="post"> <!-- Change the action attribute to your backend script -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+
+        menuIcon.addEventListener('click', function() {
+     
+            sidebar.classList.toggle('sidebar-visible');      
+              });
+    });
+</script>
+
+</body>
+<footer>
+    <p>© Copyright 2024 NIOUGameHub &nbsp;</p>
+</footer>
+</html>

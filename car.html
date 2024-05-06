@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CarRacer Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container1">
+        <header id="ng">
+            <h1><span id="niou">NIOU</span><span id="gamehub">GameHub</span></h1>
+        </header>
+
+        <nav>
+            <a id="menu-icon" href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="Home.html">Home</a>
+            <a href="Games.html">Games</a>
+        </nav>
+    </div>
+
+        
+        <div class="sidebar">
+            <a href="profile.html"> <i class="fa-solid fa-user"></i> User Profile</a>
+            <a href="login.html"> <i class="fa-solid fa-user"></i> Login/Sign up</a>
+            <a href="#"> <i class="fa-solid fa-envelope"></i> Contact Us</a>
+            <a href="#"> <i class="fa-solid fa-share-nodes"></i> Share</a>
+            <a href=""> <i class="fa-solid fa-circle-question"></i> About</a>
+
+        </div>
+        <div class="carGame">
+            <div class="score1"></div>
+            <div class="startScreen">
+                <p>Press here to start <br>
+                   Use Arrow keys to move <br>
+                   If you hit another car you will lose.  
+                </p>
+                <div>Select Level
+                    <span class="level">
+                        <button id="easy">Easy</button>
+                        <button id="moderate">Moderate</button>
+                        <button id="difficult">Difficult</button>
+                    </span>
+                </div>
+            </div>
+            <div class="gameArea"></div>
+        </div>
+          <!-- Game Rules Modal for Game 7 -->
+      <div id="gameRulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Car Race Rules</h2>
+                <ol>
+                    <li></li>
+                    <li></li>
+                
+                  </ol>
+        </div>
+      </div>
+    
+      <script src="gamerules.js"></script>
+      <script src="car.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+
+        menuIcon.addEventListener('click', function() {
+     
+            sidebar.classList.toggle('sidebar-visible');      
+              });
+    });
+</script>
+
+</body>
+<footer>
+    <p>© Copyright 2024 NIOUGameHub &nbsp;</p>
+</footer>
+</html>

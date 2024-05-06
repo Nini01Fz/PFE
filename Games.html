@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jeux Simples</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body>
+    <div class="container1">
+        <header id="ng">
+            <h1><span id="niou">NIOU</span><span id="gamehub">GameHub</span></h1>
+        </header>
+
+        <nav>
+            <a id="menu-icon" href="#"><i class="fa-solid fa-bars"></i></a>
+            <a href="Home.html">Home</a>
+            <a href="Games.html">Games</a>
+        </nav>
+    </div>
+
+        
+        <div class="sidebar">
+           <a href="profile.html"> <i class="fa-solid fa-user"></i> User Profile</a>
+           <a href="login.html"> <i class="fa-solid fa-user"></i> Login/Sign up</a>
+           <a href="#"> <i class="fa-solid fa-envelope"></i> Contact Us</a>
+           <a href="#"> <i class="fa-solid fa-share-nodes"></i>Share</a>
+            <a href=""> <i class="fa-solid fa-circle-question"></i> About</a>
+        </div>
+       <div class="wrapper">
+    <section>
+
+        <div class="game1">
+            <img src="game1.png" alt="Memory Game">
+            <h3>Memory Game</h3><br>
+            <a href="memorygame.html" class="jouer" data-game-url="memorygame.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+
+        <div class="game1">
+            <img src="tictac.jpg" alt="tictactoe">
+            <h3>Tic Tac Toe</h3><br>
+            <a href="index2.html" class="jouer"data-game-url="index2.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+
+        <div class="game1">
+            <img src="hangman.png" alt="hangman">
+            <h3>Hangman</h3><br>
+            <a href="hangman.html" class="jouer" data-game-url="hangman.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+
+        <div class="game1">
+            <img src="dino1.png" alt="dinosaur">
+            <h3>Dinosaur Game</h3>
+            <a href="dino.html" class="jouer" data-game-url="dino.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+        <div class="game1">
+            <img src="rsp.png" alt="rock-scissors-paper">
+            <h3>Rock-Scissors-Paper</h3><br>
+            <a href="rsp.html" class="jouer" data-game-url="rsp.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+        <div class="game1">
+            <img src="snake.png" alt="Snake Game">
+            <h3>Snake Game</h3>
+            <a href="snake.html" class="jouer" data-game-url="snake.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+        <div class="game1">
+            <img src="car.jpg" alt="CarRacer Game">
+            <h3>Car Racer Game</h3><br>
+            <a href="car.html" class="jouer" data-game-url="car.html"><i class="fa-solid fa-play"></i></a>
+        </div>
+        <div class="game1">
+            <img src="" alt="Snake Game">
+            <h3>Car Racer Game</h3><br>
+            <a href="" class="jouer" data-game-url=".html"><i class="fa-solid fa-play"></i></a>
+        </div>
+    </section>
+   </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menu-icon');
+            const sidebar = document.querySelector('.sidebar');
+    
+            menuIcon.addEventListener('click', function() {
+         
+                sidebar.classList.toggle('sidebar-visible');      
+               }); 
+               const gameAnchors = document.querySelectorAll('.jouer');
+           // Iterate over each game link
+           gameLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Prevent default link behavior
+                    event.preventDefault();
+
+                    // Check if the user is logged in (you can adjust this logic based on your session management)
+                    const isLoggedIn = true; // Replace this with your actual login check logic
+
+                    if (isLoggedIn) {
+                        // If logged in, redirect to the game directly
+                        window.location.href = this.getAttribute('data-game-url');
+                    } else {
+                        // If not logged in, redirect to the login page with the game URL as a parameter
+                        const gameUrl = this.getAttribute('data-game-url');
+                        window.location.href = `login.html?redirect=${encodeURIComponent(gameUrl)}`;
+                    }
+                });
+            });
+        });
+    </script>
+    
+      
+</body>
+<footer>
+    <p>© Copyright 2024 NIOUGameHub &nbsp;</p>
+</footer>
+</html>
